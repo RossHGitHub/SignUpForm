@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
@@ -43,9 +44,89 @@ body{
     font-size: 80px;
     position: absolute;
     right: 140px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .right{
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.rightTop {
+    background-color: rgb(247, 247, 247);
+    padding: 200px 100px 50px 100px;
+}
+
+.rightMid{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   box-shadow: 4px 4px 15px rgb(196, 194, 194);
+
+}
+
+.midTitle {
+    padding-left: 50px;
+    padding-top: 20px;
+}
+form {
+    display: flex;
+    padding: 20px 0px 20px 40px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.formLine {
+    display: flex;
+    width: 800px;
+}
+.formItem {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 150px 0px 0px;
+    max-width: 200px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+#firstName,
+#lastName,
+#emailAddress,
+#phoneNumber,
+#password,
+#confirmPassword {
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+    height: 25px;
+    width: 250px;
+}
+#firstName:focus,
+#lastName:focus,
+#emailAddress:focus,
+#phoneNumber:focus,
+#password:focus,
+#confirmPassword:focus {
+    outline: none;
+    border-color: #75a1ff;
+    box-shadow: 3px 3px 5px rgb(116, 116, 116);
+}
+.rightBottom {
+    background-color: rgb(247, 247, 247);
+}
+
+#formSubmit{
+    margin: 40px 0px 0px 60px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    font-weight: 800;
+    background-color: #596D48;
+    outline: none;
+    border-radius: 10px;
 }

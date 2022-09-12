@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
     <div class="container">
         <div class="left">
             
@@ -69,15 +70,34 @@
                         <input type="password" id="confirmPassword" name="confirmPassword" required>
                         </div>
                         </div>
-
+                        <p id="passError"></p>
                     
                 </form>
             </div>
 
 
-            <div class="rightBot"></div>
+            <div class="rightBot">
             <button type="submit" id="formSubmit" form="form">Create Account</button>
+            <h4>Already have an account? <a href="https://www.google.com" id="login">Log In</a></h4>
+            </div>
         </div>
     </div>
+    <script>
+        let password = document.getElementById('password');
+        let passwordCon = document.getElementById('confirmPassword');
+        let button = document.getElementById('formSubmit');
+        let error=document.getElementById('passError');
+        let form = document.querySelector('form');
+
+        button.addEventListener('click', ()=>{
+        if (password.value!=passwordCon.value){
+            password.classList='password:invalid';
+            passwordCon.classList='confirmPassword:invalid';
+            form.appendChild(error);
+            error.innerHTML='*Passwords do not match.';
+        } else if (password.value===passwordCon.value){
+            form.removeChild(error);
+        }});
+        </script>
 </body>
 </html>

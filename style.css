@@ -65,7 +65,7 @@ body{
    display: flex;
    flex-direction: column;
    width: 100%;
-   box-shadow: 4px 4px 15px rgb(196, 194, 194);
+   box-shadow: 4px 4px 15px rgb(131, 131, 131);
 
 }
 
@@ -115,8 +115,18 @@ form {
     border-color: #75a1ff;
     box-shadow: 3px 3px 5px rgb(116, 116, 116);
 }
-.rightBottom {
+
+#password:invalid,
+#confirmPassword:invalid {
+    border-color: red;
+    
+}
+
+#password
+.rightBot {
     background-color: rgb(247, 247, 247);
+    width: 100%;
+    height: 100%;
 }
 
 #formSubmit{
@@ -129,4 +139,20 @@ form {
     background-color: #596D48;
     outline: none;
     border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(110, 110, 110);
+}
+
+h4 {
+    margin: 50px 0px 0px 60px;
+}
+
+#login {
+    text-decoration: none;
+    color: #596D48;
+}
+
+#passError {
+    color: red;
+    font-size: 12px;
+    padding-left: 40px
 }
